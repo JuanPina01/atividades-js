@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+ function calcularCredito(saldoMedio) {
+    let valorCredito = 0;
+
+    if (saldoMedio >= 501 && saldoMedio <= 1000) {
+        valorCredito = saldoMedio * 0.3; // 30% do saldo médio
+    } else if (saldoMedio >= 1001 && saldoMedio <= 3000) {
+        valorCredito = saldoMedio * 0.4; // 40% do saldo médio
+    } else if (saldoMedio > 3000) {
+        valorCredito = saldoMedio * 0.5; // 50% do saldo médio
+    }
+
+    return valorCredito;
+    }
+
+    const saldoMedio = parseFloat(prompt("Digite o saldo médio do cliente:"));
+
+    const valorCredito = calcularCredito(saldoMedio);
+
+    document.write("Saldo Médio: R$" + saldoMedio.toFixed(2));
+    if (valorCredito > 0) {
+        document.write("Valor do Crédito: R$" + valorCredito.toFixed(2));
+    } else {
+        document.write("O cliente não tem direito a crédito.");
+    }
+
+    </script>
+</body>
+</html>

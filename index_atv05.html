@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+         function classeEleitoral(idade) {
+            if (idade < 16) {
+                return "Não é obrigado votar";
+            } else if (idade >= 16 && idade < 18 || idade >= 65) {
+                return "Eleitor facultativo";
+            } else {
+                return "Eleitor obrigado a votar";
+            }
+        }
+
+         const idade = parseInt(prompt("Digite a sua idade:"));
+
+         const classe = classeEleitoral(idade);
+        document.write("Classe eleitoral: " + classe);
+
+
+    </script>
+</body>
+</html>

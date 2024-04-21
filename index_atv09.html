@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+         function calcularQuantidadeSalariosMinimos(salarioUsuario, salarioMinimo) {
+            return salarioUsuario / salarioMinimo;
+        }
+
+         const salarioMinimo = 1212.00;
+
+         const salarioUsuario = parseFloat(prompt("Digite o salário do usuário:"));
+
+         const quantidadeSalariosMinimos = calcularQuantidadeSalariosMinimos(salarioUsuario, salarioMinimo);
+
+         document.write("O usuário ganha aproximadamente " + quantidadeSalariosMinimos.toFixed(2) + " salários mínimos.");
+
+
+    </script>
+</body>
+</html>

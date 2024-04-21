@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        const pratos = [
+            { nome: "Vegetariano", calorias: 180 },
+            { nome: "Peixe", calorias: 230 },
+            { nome: "Frango", calorias: 250 },
+            { nome: "Carne", calorias: 350 }
+        ];
+
+        const sobremesas = [
+            { nome: "Abacaxi", calorias: 75 },
+            { nome: "Sorvete Diet", calorias: 110 },
+            { nome: "Mousse Diet", calorias: 170 },
+            { nome: "Mousse de Chocolate", calorias: 200 }
+        ];
+
+        const bebidas = [
+            { nome: "Chá", calorias: 20 },
+            { nome: "Suco de Laranja", calorias: 70 },
+            { nome: "Suco de Melão", calorias: 100 },
+            { nome: "Refrigerante Diet", calorias: 65 }
+        ];
+
+        function escolherOpcao(opcoes) {
+            for (let i = 0; i < opcoes.length; i++) {
+                document.write(`${i + 1} - ${opcoes[i].nome}`);
+            }
+            const escolha = prompt("Escolha uma opção:");
+            return opcoes[parseInt(escolha) - 1];
+        }
+
+        function calcularTotalCalorias() {
+            document.write("Escolha seu prato: <br>");
+            const pratoEscolhido = escolherOpcao(pratos);
+            
+             document.write("Escolha sua sobremesa:");
+            const sobremesaEscolhida = escolherOpcao(sobremesas);
+            
+             document.write("Escolha sua bebida: <br>");
+            const bebidaEscolhida = escolherOpcao(bebidas);
+            
+            const totalCalorias = pratoEscolhido.calorias + sobremesaEscolhida.calorias + bebidaEscolhida.calorias;
+            
+             document.write(`Total de calorias da refeição: ${totalCalorias}`);
+        }
+
+        calcularTotalCalorias();
+
+
+    </script>
+</body>
+</html>

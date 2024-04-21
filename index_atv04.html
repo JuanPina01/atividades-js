@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        function ordenarDescendente(a, b, c) {
+            let valores = [a, b, c];
+            valores.sort((x, y) => y - x);  
+            return valores;
+        }
+
+        function imprimirDescendente(valores) {
+            document.write("Ordem descendente: " + valores.join(", "));
+        }
+
+        const A = parseInt(prompt("Digite o valor de A:"));
+        const B = parseInt(prompt("Digite o valor de B:"));
+        const C = parseInt(prompt("Digite o valor de C:"));
+
+        const valoresOrdenados = ordenarDescendente(A, B, C);
+        imprimirDescendente(valoresOrdenados);
+
+
+    </script>
+</body>
+</html>

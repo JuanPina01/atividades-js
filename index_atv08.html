@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+         function lerDetalhesPeca(numeroPeca) {
+            const codigo = parseInt(prompt(`Digite o código da peça ${numeroPeca}:`));
+            const valorUnitario = parseFloat(prompt(`Digite o valor unitário da peça ${numeroPeca}:`));
+            const quantidade = parseInt(prompt(`Digite a quantidade da peça ${numeroPeca}:`));
+
+            return { codigo, valorUnitario, quantidade };
+        }
+
+         function calcularValorTotal(pecas, ipi) {
+            const valorTotal = pecas.reduce((total, peca) => {
+                return total + (peca.valorUnitario * peca.quantidade);
+            }, 0);
+
+            const valorTotalComIPI = valorTotal * (ipi / 100 + 1);
+
+            return valorTotalComIPI;
+        }
+
+         const ipi = parseFloat(prompt("Digite a porcentagem do IPI a ser acrescido:"));
+
+         const peca1 = lerDetalhesPeca(1);
+
+         const peca2 = lerDetalhesPeca(2);
+
+         const valorTotal = calcularValorTotal([peca1, peca2], ipi);
+
+         document.write("Valor total a ser pago: R$" + valorTotal.toFixed(2));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // Inicializar contadores para cada faixa de valores
+        let contadorEntre0e100 = 0;
+        let contadorEntre101e200 = 0;
+        let contadorMaioresQue200 = 0;
+
+        // Loop para ler 20 números do usuário
+        for (let i = 1; i <= 20; i++) {
+            // Ler o número do usuário
+            const numero = parseFloat(prompt("Digite o número " + i + ":"));
+
+            // Verificar em qual faixa de valores o número se encontra e incrementar o contador correspondente
+            if (numero >= 0 && numero <= 100) {
+                contadorEntre0e100++;
+            } else if (numero >= 101 && numero <= 200) {
+                contadorEntre101e200++;
+            } else {
+                contadorMaioresQue200++;
+            }
+        }
+
+        // Exibir a contagem de números em cada faixa de valores
+        document.write("Quantidade de números entre 0 e 100:", contadorEntre0e100);
+        document.write("Quantidade de números entre 101 e 200:", contadorEntre101e200);
+        document.write("Quantidade de números maiores que 200:", contadorMaioresQue200);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+         function converterParaFahrenheit(temperaturaCelsius) {
+            return (9 * temperaturaCelsius + 160) / 5;
+        }
+
+         const temperaturaCelsius = parseFloat(prompt("Digite a temperatura em graus Celsius:"));
+
+         const temperaturaFahrenheit = converterParaFahrenheit(temperaturaCelsius);
+
+         document.write("A temperatura em graus Fahrenheit é:", temperaturaFahrenheit.toFixed(2));
+
+
+    </script>
+</body>
+</html>

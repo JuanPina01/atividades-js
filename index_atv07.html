@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+         function calcularMedia(...numeros) {
+            const soma = numeros.reduce((total, numero) => total + numero, 0);
+            return soma / numeros.length;
+         }
+
+            const media1 = calcularMedia(8, 9, 7);
+            const media2 = calcularMedia(4, 5, 6);
+
+            const somaDasMedias = media1 + media2;
+
+            const mediaDasMedias = calcularMedia(media1, media2);
+
+            document.write("Média dos números 8, 9 e 7:", media1 + "<br>");
+            document.write("Média dos números 4, 5 e 6:", media2  + "<br>");
+            document.write("Soma das duas médias:", somaDasMedias + "<br>");
+            document.write("Média das médias:", mediaDasMedias + "<br>");
+
+
+    </script>
+</body>
+</html>

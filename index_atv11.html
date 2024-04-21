@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+         function calcularSalarioFinal(salarioFixo, totalVendas) {
+            const comissao = totalVendas * 15.0; 
+            return salarioFixo + comissao;
+        }
+
+            const nomeVendedor = prompt("Digite o nome do vendedor:");
+
+            const salarioFixo = parseFloat(prompt("Digite o salário fixo do vendedor:"));
+
+            const totalVendas = parseFloat(prompt("Digite o total de vendas efetuadas pelo vendedor no mês:"));
+
+            const salarioFinal = calcularSalarioFinal(salarioFixo, totalVendas);
+
+            document.write("Nome do vendedor: " + nomeVendedor + "<br />");
+            document.write("Salário fixo: R$" + salarioFixo.toFixed(2) + "<br />");
+            document.write("Salário no final do mês: R$" + salarioFinal.toFixed(2));
+
+
+    </script>
+</body>
+</html>

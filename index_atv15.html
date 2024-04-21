@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // Inicializar a variável para armazenar a soma das idades
+        let somaIdades = 0;
+
+        // Loop para ler a idade de 20 pessoas
+        for (let i = 1; i <= 20; i++) {
+            // Ler a idade da pessoa
+            const idade = parseInt(prompt("Digite a idade da pessoa " + i + ":"));
+
+            // Adicionar a idade à soma das idades
+            somaIdades += idade;
+        }
+
+        // Exibir a soma das idades
+        document.write("A soma das idades das 20 pessoas é:", somaIdades);
+
+
+    </script>
+</body>
+</html>
